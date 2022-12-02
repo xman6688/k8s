@@ -9,5 +9,6 @@ kubectl create namespace gemfire-cluster
 
 
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
 
 kubectl create secret tls tls-example --key domain.key --cert domain.crt -n gemfire-cluster
