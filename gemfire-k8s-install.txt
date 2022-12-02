@@ -12,3 +12,17 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
 
 kubectl create secret tls tls-example --key domain.key --cert domain.crt -n gemfire-cluster
+
+
+
+kubectl create secret docker-registry image-pull-secret --namespace=gemfire-operator --docker-server=registry.tanzu.vmware.com --docker-username='XXX@XXX.com' --docker-password='PASSWORD'
+kubectl create secret docker-registry image-pull-secret --namespace=gemfire-cluster --docker-server=registry.tanzu.vmware.com --docker-username='XXX@XXX.com' --docker-password='PASSWORD'
+
+
+
+
+
+helm install gemfire-crd gemfire-crd-2.0.0.tgz --namespace gemfire-operator --set operatorReleaseName=gemfire-operator
+helm install gemfire-operator gemfire-operator-2.0.0.tgz -n gemfire-operator
+helm list -n gemfire-operator
+
