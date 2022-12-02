@@ -1,3 +1,6 @@
+docker login registry.tanzu.vmware.com
+
+
 kubectl create namespace cert-manager
 
 kubectl create namespace gemfire-operator
