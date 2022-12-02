@@ -38,7 +38,8 @@ kubectl get pod -n gemfire-cluster -o wide
 
 
 # connect to locator
-kubectl exec -it gemfire5-locator-0 -n gemfire-cluster  -- bash
+kubectl exec -it gemfire5-locator-0 -n gemfire-cluster -- bash
+kubectl exec -it gemfire5-locator-0 -n gemfire-cluster -- hostname -f
 
 kubectl exec -it gemfire5-locator-0 -n gemfire-cluster  -- gfsh
 connect --locator=HOSTNAME[10334]
