@@ -1,0 +1,7 @@
+kubectl create namespace cert-manager
+
+kubectl create namespace gemfire-operator
+
+kubectl create namespace gemfire-cluster
+
+
