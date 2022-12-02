@@ -26,3 +26,8 @@ helm install gemfire-crd gemfire-crd-2.0.0.tgz --namespace gemfire-operator --se
 helm install gemfire-operator gemfire-operator-2.0.0.tgz -n gemfire-operator
 helm list -n gemfire-operator
 
+
+
+
+kubectl get pod -n gemfire-cluster
+
